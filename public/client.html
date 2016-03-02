@@ -20,12 +20,17 @@
 		<input type="submit" class="chat" value="chat"/>
 	</form>
 
-
 	<div id="box" class="box">
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 		<script>
 		var socket = io();
+		var name = '';
+		socket.on('resend user',function(name){
+			this.name = name;
+		});
+
+		console.log('name ::>>> ' + name);
 		$('#chat').on('submit', function(e){
 			socket.emit('send message', $('#name').val(), $('#message').val());
 			$('message').val('');
