@@ -1,0 +1,15 @@
+{
+  "name": "soket.io_chatting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "author": "mufasa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
